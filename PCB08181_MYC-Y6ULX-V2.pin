@@ -1,4 +1,4 @@
-PCB08181Rev0A
+PCB08181Rev2
 
 PIN_NO=1
 	NET=ONOFF
@@ -33,7 +33,7 @@ PIN_NO=4
 	PIN=
 	GPIO=
 	CONFIG:
-	COMMENT: BOOT_MODE0: SW1-3
+	COMMENT: BOOT_MODE0: SW3-3
 	SOM: 10K pull up to 3.3V on SOM
 
 PIN_NO=5,
@@ -42,7 +42,7 @@ PIN_NO=5,
 	PIN=
 	GPIO=
 	CONFIG:
-	COMMENT: BOOT_MODE1: SW1-4
+	COMMENT: BOOT_MODE1: SW3-4
 	SOM: 10K pull up to 3.3V on SOM
 
 PIN_NO=6
@@ -59,7 +59,7 @@ PIN_NO=7
 	PORT=5
 	PIN=8
 	GPIO=136
-	CONFIG: Output
+	CONFIG: GPIO-Output
 	COMMENT: LED-HB
 	SOM:
 
@@ -68,7 +68,7 @@ PIN_NO=8
 	PORT=5
 	PIN=7
 	GPIO=135
-	CONFIG: Output
+	CONFIG: GPIO-Output
 	COMMENT: LED-ST
 	SOM:
 
@@ -77,7 +77,7 @@ PIN_NO=9
 	PORT=5
 	PIN=6
 	GPIO=134
-	CONFIG: Output
+	CONFIG: GPIO-Output
 	COMMENT: ENET_RST
 	SOM:
 
@@ -86,7 +86,7 @@ PIN_NO=10
 	PORT=5
 	PIN=5
 	GPIO=133
-	CONFIG: Output
+	CONFIG: GPIO-Output
 	COMMENT: LE
 	SOM:
 
@@ -95,8 +95,8 @@ PIN_NO=11
 	PORT=5
 	PIN=4
 	GPIO=132
-	CONFIG: Output
-	COMMENT: OR with SPI1-SCK to act as MBI5040_SCK( Red)
+	CONFIG: GPIO
+	COMMENT:Free pin
 	SOM:
 
 PIN_NO=12
@@ -104,8 +104,8 @@ PIN_NO=12
 	PORT=5
 	PIN=3
 	GPIO=131
-	CONFIG: Output
-	COMMENT:
+	CONFIG: GPIO-Output
+	COMMENT: TAMPER3
 	SOM:
 
 PIN_NO=13
@@ -113,8 +113,8 @@ PIN_NO=13
 	PORT=5
 	PIN=2
 	GPIO=130
-	CONFIG: Input
-	COMMENT: NISIN4
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM:
 
 PIN_NO=14
@@ -122,8 +122,8 @@ PIN_NO=14
 	PORT=5
 	PIN=1
 	GPIO=129
-	CONFIG: Input
-	COMMENT: NISIN3
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM:
 
 PIN_NO=15
@@ -131,8 +131,8 @@ PIN_NO=15
 	PORT=5
 	PIN=0
 	GPIO=128
-	CONFIG: Output
-	COMMENT:
+	CONFIG: GPIO-Output
+	COMMENT: TAMPER0
 	SOM:
 
 PIN_NO=16
@@ -149,8 +149,8 @@ PIN_NO=17
 	PORT=1
 	PIN=14
 	GPIO=14
-	CONFIG: Input
-	COMMENT: NISIN2
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM: 10K pull down to gnd on SOM
 
 PIN_NO=18
@@ -158,8 +158,8 @@ PIN_NO=18
 	PORT=1
 	PIN=13
 	GPIO=13
-	CONFIG: Input
-	COMMENT: NISIN1
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM:
 
 PIN_NO=19
@@ -167,8 +167,8 @@ PIN_NO=19
 	PORT=1
 	PIN=15
 	GPIO=15
-	CONFIG: Output
-	COMMENT: OR with SPI2-SCK to act as MBI5040_SCK( Green)
+	CONFIG: GPIO-Output
+	COMMENT: CN9_20
 	SOM:
 
 PIN_NO=20
@@ -176,7 +176,7 @@ PIN_NO=20
 	PORT=1
 	PIN=11
 	GPIO=11
-	CONFIG: Input
+	CONFIG: GPIO-Input(+22K pull-up)
 	COMMENT: STR Feed Back
 	SOM:
 
@@ -185,7 +185,7 @@ PIN_NO=21
 	PORT=1
 	PIN=12
 	GPIO=12
-	CONFIG: Input
+	CONFIG: GPIO-Input(+22K pull-up)
 	COMMENT: OE Feed Back
 	SOM:
 
@@ -194,8 +194,8 @@ PIN_NO=22
 	PORT=1
 	PIN=10
 	GPIO=10
-	CONFIG: Output
-	COMMENT: OR with SPI3-SCK to act as MBI5040_SCK( Blue)
+	CONFIG: GPIO-Output
+	COMMENT: CN9_18
 	SOM: 10K pull down to gnd on SOM
 
 PIN_NO=23
@@ -366,7 +366,7 @@ PIN_NO=41
 	PIN=1
 	GPIO=1
 	CONFIG: Analog Input
-	COMMENT: ADC
+	COMMENT: 4.2V_IN
 	SOM:
 
 PIN_NO=42
@@ -428,8 +428,8 @@ PIN_NO=48
 	PORT=1
 	PIN=8
 	GPIO=8
-	CONFIG: PWM1
-	COMMENT: Grey CLK
+	CONFIG: PWM
+	COMMENT: OE
 	SOM:
 	
 PIN_NO=49
@@ -473,8 +473,8 @@ PIN_NO=53
 	PORT=1
 	PIN=19
 	GPIO=19
-	CONFIG: Output
-	COMMENT: Free pin
+	CONFIG: GPIO-Input(+22K pull-up)
+	COMMENT: MOSFET Status 2
 	SOM:
 
 PIN_NO=54
@@ -482,8 +482,8 @@ PIN_NO=54
 	PORT=1
 	PIN=18
 	GPIO=18
-	CONFIG: Output
-	COMMENT: HB LED
+	CONFIG: GPIO-Input(+22K pull-up)
+	COMMENT: MOSFET Status 1
 	SOM:
 
 PIN_NO=55
@@ -554,8 +554,8 @@ PIN_NO=62
 	PORT=1
 	PIN=27
 	GPIO=27
-	CONFIG: Output
-	COMMENT: R_Clear
+	CONFIG: GPIO-Output
+	COMMENT: Relay
 	SOM:
 
 PIN_NO=63
@@ -779,8 +779,8 @@ PIN_NO=87
 	PORT=3
 	PIN=5
 	GPIO=69
-	CONFIG: Output
-	COMMENT: MOSFET output 4
+	CONFIG: GPIO-Output
+	COMMENT:
 	SOM: 47K pull down to gnd on SOM
 
 PIN_NO=88
@@ -788,8 +788,8 @@ PIN_NO=88
 	PORT=3
 	PIN=6
 	GPIO=70
-	CONFIG: Output
-	COMMENT: MOSFET output 3
+	CONFIG: GPIO-Output
+	COMMENT:
 	SOM: 47K pull down to gnd on SOM
 
 PIN_NO=89
@@ -797,7 +797,7 @@ PIN_NO=89
 	PORT=3
 	PIN=7
 	GPIO=71
-	CONFIG: Output
+	CONFIG: GPIO-Output
 	COMMENT: MOSFET output 2
 	SOM: 47K pull down to gnd on SOM
 
@@ -806,7 +806,7 @@ PIN_NO=90
 	PORT=3
 	PIN=8
 	GPIO=72
-	CONFIG: Output
+	CONFIG: GPIO-Output
 	COMMENT: MOSFET output 1
 	SOM: 47K pull down to gnd on SOM
 
@@ -815,8 +815,8 @@ PIN_NO=91
 	PORT=3
 	PIN=9
 	GPIO=73
-	CONFIG: Input
-	COMMENT: MOSFET Output 2 Status
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM: 10K pull up to 3.3V on SOM
 
 PIN_NO=92
@@ -825,7 +825,7 @@ PIN_NO=92
 	PIN=10
 	GPIO=74
 	CONFIG: boot selection
-	COMMENT: SW1-1
+	COMMENT: SW3-1
 	SOM: NAND:10K pull down/EMMC:10K pull up on SOM
 
 PIN_NO=93
@@ -834,7 +834,7 @@ PIN_NO=93
 	PIN=11
 	GPIO=75
 	CONFIG: boot selection
-	COMMENT: SW1-2
+	COMMENT: SW3-2
 	SOM: 10K pull up on SOM
 
 PIN_NO=94
@@ -843,7 +843,7 @@ PIN_NO=94
 	PIN=12
 	GPIO=76
 	CONFIG: boot selection
-	COMMENT: SW1-1
+	COMMENT: SW3-1
 	SOM: NAND:10K pull down/EMMC:10K pull up on SOM
 
 PIN_NO=95
@@ -860,8 +860,8 @@ PIN_NO=96
 	PORT=3
 	PIN=13
 	GPIO=77
-	CONFIG: Input
-	COMMENT: MOSFET Output 1 Status
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM: 10K pull up to 3.3v on SOM
 
 PIN_NO=97
@@ -869,8 +869,8 @@ PIN_NO=97
 	PORT=3
 	PIN=14
 	GPIO=78
-	CONFIG: Input
-	COMMENT: MOSFET Output 3 Status
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM: 10K pull up to 3.3v on SOM
 
 PIN_NO=98
@@ -878,8 +878,8 @@ PIN_NO=98
 	PORT=3
 	PIN=15
 	GPIO=79
-	CONFIG: Input
-	COMMENT: MOSFET Output 4 Status
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM: 10K pull up to 3.3v on SOM
 
 PIN_NO=99
@@ -888,7 +888,7 @@ PIN_NO=99
 	PIN=16
 	GPIO=80
 	CONFIG: boot selection
-	COMMENT: SW1-2
+	COMMENT: SW3-2
 	SOM: NAND:10K pull down/EMMC:10K pull up on SOM
 
 PIN_NO=100
@@ -896,8 +896,8 @@ PIN_NO=100
 	PORT=3
 	PIN=17
 	GPIO=81
-	CONFIG: Input
-	COMMENT: Isolated IN1
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM: 47K pull down to gnd on SOM
 
 PIN_NO=101
@@ -905,8 +905,8 @@ PIN_NO=101
 	PORT=3
 	PIN=18
 	GPIO=82
-	CONFIG: Input
-	COMMENT: Isolated IN2
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM: 47K pull down to gnd on SOM
 
 PIN_NO=102
@@ -914,8 +914,8 @@ PIN_NO=102
 	PORT=3
 	PIN=19
 	GPIO=83
-	CONFIG: Input
-	COMMENT: Isolated IN3
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM: 47K pull down to gnd on SOM
 
 PIN_NO=103
@@ -923,8 +923,8 @@ PIN_NO=103
 	PORT=3
 	PIN=20
 	GPIO=84
-	CONFIG: Input
-	COMMENT: Isolated IN4
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM: 47K pull down to gnd on SOM
 
 PIN_NO=104
@@ -959,8 +959,8 @@ PIN_NO=107
 	PORT=3
 	PIN=23
 	GPIO=87
-	CONFIG: Input
-	COMMENT: SW1-8
+	CONFIG: GPIO-Input
+	COMMENT: SW3-8
 	SOM: 47K pull down to gnd on SOM
 
 PIN_NO=108
@@ -968,8 +968,8 @@ PIN_NO=108
 	PORT=3
 	PIN=24
 	GPIO=88
-	CONFIG: Input
-	COMMENT: SW1-7
+	CONFIG: GPIO-Input
+	COMMENT: SW3-7
 	SOM: 47K pull down to gnd on SOM
 
 PIN_NO=109
@@ -977,8 +977,8 @@ PIN_NO=109
 	PORT=3
 	PIN=25
 	GPIO=89
-	CONFIG: Not Used
-	COMMENT: Not Used
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM: 47K pull down to gnd on SOM
 
 PIN_NO=110
@@ -986,8 +986,8 @@ PIN_NO=110
 	PORT=3
 	PIN=26
 	GPIO=90
-	CONFIG: Not Used
-	COMMENT: Not Used
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM: 47K pull down to gnd on SOM
 
 PIN_NO=111
@@ -995,8 +995,8 @@ PIN_NO=111
 	PORT=3
 	PIN=27
 	GPIO=91
-	CONFIG: Input
-	COMMENT: SW1-6
+	CONFIG: GPIO-Input
+	COMMENT: SW3-6
 	SOM: 47K pull down to gnd on SOM
 
 PIN_NO=112
@@ -1004,8 +1004,8 @@ PIN_NO=112
 	PORT=3
 	PIN=28
 	GPIO=92
-	CONFIG: Input
-	COMMENT: SW1-5
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM: 47K pull down to gnd on SOM
 
 PIN_NO=113
@@ -1031,8 +1031,8 @@ PIN_NO=115
 	PORT=3
 	PIN=3
 	GPIO=67
-	CONFIG: Output
-	COMMENT: SW_ON1 For Relay
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM:
 
 PIN_NO=116
@@ -1040,8 +1040,8 @@ PIN_NO=116
 	PORT=3
 	PIN=2
 	GPIO=66
-	CONFIG: Not Used
-	COMMENT: Not Used
+	CONFIG: GPIO
+	COMMENT: Free
 	SOM:
 
 PIN_NO=117
@@ -1049,8 +1049,8 @@ PIN_NO=117
 	PORT=3
 	PIN=1
 	GPIO=65
-	CONFIG: Input(+22K pull-up)
-	COMMENT: SW3, Push Button
+	CONFIG: GPIO-Input(+22K pull-up)
+	COMMENT: SW2, Push Button
 	SOM:
 
 PIN_NO=118
@@ -1058,8 +1058,8 @@ PIN_NO=118
 	PORT=3
 	PIN=0
 	GPIO=64
-	CONFIG: Not Used
-	COMMENT: Not Used
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM:
 
 PIN_NO=119
@@ -1067,8 +1067,8 @@ PIN_NO=119
 	PORT=4
 	PIN=16
 	GPIO=112
-	CONFIG: Not Used
-	COMMENT: Not Used
+	CONFIG: GPIO-Input
+	COMMENT: Isolated IN1
 	SOM:
 
 PIN_NO=120
@@ -1076,7 +1076,7 @@ PIN_NO=120
 	PORT=4
 	PIN=14
 	GPIO=110
-	CONFIG: Output
+	CONFIG: GPIO
 	COMMENT: Free pin
 	SOM:
 
@@ -1094,8 +1094,8 @@ PIN_NO=122
 	PORT=2
 	PIN=21
 	GPIO=53
-	CONFIG: Input(+22K pull-up)
-	COMMENT: SW2-8
+	CONFIG: GPIO-Input(+22K pull-up)
+	COMMENT: SW1-8
 	SOM:
 
 PIN_NO=123
@@ -1103,8 +1103,8 @@ PIN_NO=123
 	PORT=2
 	PIN=20
 	GPIO=52
-	CONFIG: Input(+22K pull-up)
-	COMMENT: SW2-7
+	CONFIG: GPIO-Input(+22K pull-up)
+	COMMENT: SW1-7
 	SOM:
 
 PIN_NO=124
@@ -1112,8 +1112,8 @@ PIN_NO=124
 	PORT=2
 	PIN=19
 	GPIO=51
-	CONFIG: Input(+22K pull-up)
-	COMMENT: SW2-6
+	CONFIG: GPIO-Input(+22K pull-up)
+	COMMENT: SW1-6
 	SOM:
 
 PIN_NO=125
@@ -1121,8 +1121,8 @@ PIN_NO=125
 	PORT=2
 	PIN=18
 	GPIO=50
-	CONFIG: Input(+22K pull-up)
-	COMMENT: SW2-5
+	CONFIG: GPIO-Input(+22K pull-up)
+	COMMENT: SW1-5
 	SOM:
 
 PIN_NO=126
@@ -1130,8 +1130,8 @@ PIN_NO=126
 	PORT=2
 	PIN=16
 	GPIO=48
-	CONFIG: Input(+22K pull-up)
-	COMMENT: SW2-4
+	CONFIG: GPIO-Input(+22K pull-up)
+	COMMENT: SW1-4
 	SOM:
 
 PIN_NO=127
@@ -1139,8 +1139,8 @@ PIN_NO=127
 	PORT=2
 	PIN=17
 	GPIO=49
-	CONFIG: Input(+22K pull-up)
-	COMMENT: SW2-3
+	CONFIG: GPIO-Input(+22K pull-up)
+	COMMENT: SW1-3
 	SOM:
 
 PIN_NO=128
@@ -1193,8 +1193,8 @@ PIN_NO=133
 	PORT=4
 	PIN=24
 	GPIO=120
-	CONFIG: Input(+22K pull-up)
-	COMMENT: SW2-2
+	CONFIG: GPIO-Input(+22K pull-up)
+	COMMENT: SW1-2
 	SOM:
 
 PIN_NO=134
@@ -1202,8 +1202,8 @@ PIN_NO=134
 	PORT=4
 	PIN=23
 	GPIO=119
-	CONFIG: Input(+22K pull-up)
-	COMMENT: SW2-1
+	CONFIG: GPIO-Input(+22K pull-up)
+	COMMENT: SW1-1
 	SOM:
 
 PIN_NO=135
@@ -1211,8 +1211,8 @@ PIN_NO=135
 	PORT=4
 	PIN=22
 	GPIO=118
-	CONFIG: Not Used
-	COMMENT:
+	CONFIG: GPIO-Input
+	COMMENT: Isolated IN2
 	SOM:
 
 PIN_NO=136
@@ -1220,8 +1220,8 @@ PIN_NO=136
 	PORT=4
 	PIN=21
 	GPIO=117
-	CONFIG: Not Used
-	COMMENT:
+	CONFIG: GPIO-Input
+	COMMENT: Isolated IN3
 	SOM:
 
 PIN_NO=137
@@ -1229,8 +1229,8 @@ PIN_NO=137
 	PORT=4
 	PIN=19
 	GPIO=115
-	CONFIG: Not Used
-	COMMENT:
+	CONFIG: GPIO-Input
+	COMMENT: Isolated IN4
 	SOM:
 
 PIN_NO=138
@@ -1238,8 +1238,8 @@ PIN_NO=138
 	PORT=4
 	PIN=20
 	GPIO=116
-	CONFIG: Not Used
-	COMMENT:
+	CONFIG: GPIO-Input
+	COMMENT: SW3-5
 	SOM:
 
 PIN_NO=139
@@ -1247,8 +1247,8 @@ PIN_NO=139
 	PORT=4
 	PIN=18
 	GPIO=114
-	CONFIG: Not Used
-	COMMENT:
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM:
 
 PIN_NO=140
@@ -1256,6 +1256,6 @@ PIN_NO=140
 	PORT=4
 	PIN=17
 	GPIO=113
-	CONFIG: Not Used
-	COMMENT:
+	CONFIG: GPIO
+	COMMENT: Free pin
 	SOM:
